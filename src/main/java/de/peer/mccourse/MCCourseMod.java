@@ -1,5 +1,6 @@
 package de.peer.mccourse;
 
+import de.peer.mccourse.block.ModBlocks;
 import de.peer.mccourse.item.ModItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -34,6 +35,7 @@ public class MCCourseMod
         eventBus.addListener(this::setup);
 
         ModItems.register(eventBus);
+        ModBlocks.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
