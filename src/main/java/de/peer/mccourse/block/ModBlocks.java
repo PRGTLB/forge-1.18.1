@@ -32,11 +32,11 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> DEEPSLATE_COBALT_ORE = registerBlock("deepslate_cobalt_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(9999f).requiresCorrectToolForDrops()), ModCreativeModeTab.COURSE_TAB);
+                    .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.COURSE_TAB);
 
     public static final RegistryObject<Block> RAW_COBALT_BLOCK = registerBlock("raw_cobalt_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(1f).requiresCorrectToolForDrops()), ModCreativeModeTab.COURSE_TAB);
+                    .strength(2f).requiresCorrectToolForDrops()), ModCreativeModeTab.COURSE_TAB);
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
