@@ -1,6 +1,7 @@
 package de.peer.mccourse.block;
 
 import de.peer.mccourse.MCCourseMod;
+import de.peer.mccourse.block.custom.SpeedyBlock;
 import de.peer.mccourse.item.ModCreativeModeTab;
 import de.peer.mccourse.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -36,6 +37,10 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> RAW_COBALT_BLOCK = registerBlock("raw_cobalt_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(2f).requiresCorrectToolForDrops()), ModCreativeModeTab.COURSE_TAB);
+
+    public static final RegistryObject<Block> SPEEDY_BLOCK = registerBlock("speedy_block",
+            () -> new SpeedyBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(2f).requiresCorrectToolForDrops()), ModCreativeModeTab.COURSE_TAB);
 
 
