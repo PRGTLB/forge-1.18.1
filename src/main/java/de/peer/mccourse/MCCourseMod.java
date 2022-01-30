@@ -2,6 +2,7 @@ package de.peer.mccourse;
 
 import de.peer.mccourse.block.ModBlocks;
 import de.peer.mccourse.item.ModItems;
+import de.peer.mccourse.util.ModTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -36,6 +37,8 @@ public class MCCourseMod
 
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
+
+        ModTags.register();
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
