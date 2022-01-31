@@ -3,6 +3,7 @@ package de.peer.mccourse.item;
 import de.peer.mccourse.MCCourseMod;
 import de.peer.mccourse.item.custom.CoalSliverItem;
 import de.peer.mccourse.item.custom.DowsingRodItem;
+import de.peer.mccourse.item.custom.PaxelItem;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -50,6 +51,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> COBALT_HOE = ITEMS.register("cobalt_hoe",
             () -> new HoeItem(ModTiers.COBALT, 0, 0f,
+                    new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
+
+    public static final RegistryObject<Item> COBALT_PAXEL = ITEMS.register("cobalt_paxel",
+            () -> new PaxelItem(ModTiers.COBALT, 0, 0f,
                     new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
 
     public static void register(IEventBus eventBus) {
