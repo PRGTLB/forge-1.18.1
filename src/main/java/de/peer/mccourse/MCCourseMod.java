@@ -3,6 +3,8 @@ package de.peer.mccourse;
 import de.peer.mccourse.block.ModBlocks;
 import de.peer.mccourse.item.ModItems;
 import de.peer.mccourse.util.ModTags;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -42,6 +44,8 @@ public class MCCourseMod
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+
+        eventBus.addListener(this::clientSetup);
     }
 
     private void setup(final FMLCommonSetupEvent event)
@@ -49,5 +53,10 @@ public class MCCourseMod
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+    }
+
+    private void clientSetup(final FMLCommonSetupEvent event) {
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHERRY_BLOSSOM_DOOR.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHERRY_BLOSSOM_TRAPDOOR.get(), RenderType.cutout());
     }
 }
