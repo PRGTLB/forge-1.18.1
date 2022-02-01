@@ -1,10 +1,7 @@
 package de.peer.mccourse.item;
 
 import de.peer.mccourse.MCCourseMod;
-import de.peer.mccourse.item.custom.CoalSliverItem;
-import de.peer.mccourse.item.custom.DowsingRodItem;
-import de.peer.mccourse.item.custom.LevetationSwordItem;
-import de.peer.mccourse.item.custom.PaxelItem;
+import de.peer.mccourse.item.custom.*;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -60,7 +57,7 @@ public class ModItems {
                     new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
 
     public static final RegistryObject<Item> COBALT_HELMET = ITEMS.register("cobalt_helmet",
-            () -> new ArmorItem(ModArmorMaterials.COBALT, EquipmentSlot.HEAD,
+            () -> new ModArmorItem(ModArmorMaterials.COBALT, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModCreativeModeTab.COURSE_TAB)));
 
     public static final RegistryObject<Item> COBALT_CHESTPLATE = ITEMS.register("cobalt_chestplate",
